@@ -8,12 +8,12 @@ getUserButton.addEventListener("click",function(){
 	fetch("https://randomuser.me/api/")
 	.then(response => response.json())
 	.then(data => {
-		const user = data.result[0];
+		const user = data.results[0];
 		fullName.innerText = user.name.first + " " + user.name.last;
-		photo.src = user.picture.large;
+		photo.src = user. picture.large;
 		fullName.dataset.age = user.dob.age;
 		fullName.dataset.email = user.email;
-		fullName.dataset.age = user.phone
+		fullName.dataset.phone = user.phone;
 			additionalInfo.innerText="";
 	});
 });
